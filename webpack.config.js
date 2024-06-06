@@ -23,7 +23,7 @@ module.exports = {
         new HtmlWebpackPlugin ({
             filenmae: 'index.html',
             template: 'src/index.html',
-            title: 'Restaurant Page',
+            title: 'To Do List',
         }),
     ],
     output: {

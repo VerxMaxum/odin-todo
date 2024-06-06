@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: #404B69;
+}
+
+h1 {
+    background-color: #283149;
+    font-size: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#projects {
+    width: 100%;
+    overflow: auto;
+    flex: 1 0 auto;
+}
+
+.project > p {
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-size: 2rem;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.project:last-child > input {
+    font-size: 2rem;
+    width: 100%;
+    color: #404B69;
+}
+
+.project:last-child {
+    padding-right: 0;
+}
+
+.project > button {
+    height: fit-content;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.project > button > svg > path:hover {
+    fill: #f34949;
+}
+
+.project:hover {
+    background-color: #2d3753;
+    border-left: 4px #DBEDF3 solid;
+}
+
+#add-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#add-container > button {
+    width: 20%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: #283149;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+svg, svg > path {
+    fill: white;
+}
+
+#add-container > button:hover,
+#add-container > button:hover > svg > path {
+    background-color: white;
+    fill: #283149;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #DBEDF3;
+    flex: 1 0 auto;
+    align-items: center;
+}
+
+.add-todo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-self: flex-start;
+    padding: 2rem 0 0 2rem;
+}
+
+.add-todo > button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    width: 10%;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 2px #283149 solid;
+    padding-left: 1rem;
+    box-shadow: 0 8px 8px gray;
+    cursor: pointer;
+}
+
+.add-todo > button,
+.add-todo > svg {
+    background-color: #283149;
+    fill: #283149;
+    transition-duration: 0.5s;
+}
+
+.add-todo > button:hover,
+.add-todo > svg:hover,
+.add-todo > svg:hover > path {
+    background-color: #404B69;
+    fill: #404B69;
+    color: #404B69;
+    border: 2px #404B69 solid;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    width: 100%;
+}
+
+.todo-item {
+    width: 75%;
+    padding: 1rem 1rem 1rem 0;
+    background-color: #404B69;
+    display: flex;
+    border-radius: 10px;
+    /* Modify this part using javascript */
+    border-left: 5px #DA0463 solid;
+    box-shadow: 0 8px 12px gray;
+    cursor: pointer;
+}
+
+.checkmark {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark > input {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.todo-details {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+}
+
+.todo-details > p {
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.add-delete {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.add-delete > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.add-delete > button > svg {
+    height: 28px;
+    width: 28px;
+}
+
+.add-delete > button > svg:hover > path {
+    fill: #f34949
+}
+
+dialog {
+    top: 25%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background-color: gray;
+    opacity: 0.5;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.form-container > h2 {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    background-color: #404B69;
+}
+
+form {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form > div,
+form > label {
+    padding-left: 3rem;
+}
+
+form > .input-container > label {
+    color: #404B69;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.input-container > input,
+.input-container > select,
+.input-container > select > option {
+    width: 90%;
+    font-size: 1.5rem;
+    color: #404B69;
+}
+
+.input-container > input {
+    border: none;
+    border-bottom: 2px #283149 solid;
+}
+.button-action {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-action > button {
+    width: 20%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 0;
+    color: #404B69;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.button-action > button:first-child {
+    background-color: #DBEDF3;
+}
+
+.button-action > button:first-child:hover {
+    background-color: #c1d3da;
+}
+
+.button-action > button:last-child {
+    background-color: #404B69;
+    color: #DBEDF3;
+}
+
+.button-action > button:last-child:hover {
+    background-color: #6a7baa;
+    color: #404B69;
+}
+
