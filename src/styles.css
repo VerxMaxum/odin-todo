@@ -144,7 +144,7 @@ main {
     border: 2px #404B69 solid;
 }
 
-.todo-container {
+#todo-container {
     display: flex;
     flex-direction: column;
     align-items: center;

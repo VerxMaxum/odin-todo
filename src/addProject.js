@@ -1,9 +1,10 @@
 import { deleteProject } from './deleteProject.js';
 import { storeLocal } from './storage.js';
+import { loadSelected } from './ui.js';
 let defaultCount = 0;
 export function typeProject() {
     const projCont = document.getElementById('projects');
-
+    projCont.addEventListener("click", loadSelected);
     const project = document.createElement('div');
     project.classList.add('project');
 
