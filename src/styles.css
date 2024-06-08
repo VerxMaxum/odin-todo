@@ -160,10 +160,12 @@ main {
     display: flex;
     border-radius: 10px;
     /* Modify this part using javascript */
-    border-left: 5px #DA0463 solid;
+    /* border-left: 5px #5f5f5f solid; */
     box-shadow: 0 8px 12px gray;
     cursor: pointer;
 }
+
+/* DA0463 high, da8404 medium, 04da44 low, 5f5f5f default*/
 
 .checkmark {
     width: 10%;
